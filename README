@@ -1,0 +1,15 @@
+GENERATING RESUME
+    Just run:
+        make build-pdf
+
+    All of the intermediate build files will be contained in build/ and
+    resume.pdf will be copied into the source root dir.
+
+MAKEFILE TARGETS
+    build-pdf    Builds the resume.pdf file.
+    clean        Cleans up intermediate build files.
+
+FILES
+    resume.cls
+        A document-class for building a resume. Found via a blog post here:
+        http://linux.dsplabs.com.au/resume-writing-example-latex-template-linux-curriculum-vitae-professional-cv-layout-format-text-p54/ 
