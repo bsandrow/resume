@@ -10,8 +10,7 @@ all: build-pdf
 
 build-pdf:
 	mkdir -p $(builddir)
-	latex --output-directory=$(builddir) resume.tex
-	cd $(builddir) && dvipdf resume.dvi
+	pdflatex --output-directory=$(builddir) resume.tex
 	cp $(builddir)/resume.pdf resume.pdf
 
 clean:
