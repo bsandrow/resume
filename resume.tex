@@ -1,50 +1,61 @@
 \documentclass[a4paper,10pt]{article}
 
-%%%%%%%%%%
-%% ATTRIBUTION:
-%%
-%% This is a modified version of the resume template found here:
-%%     http://www.cv-templates.info/2009/03/professional-cv-latex/
-%%
+%---------
+%- ATTRIBUTION:
+%-
+%- This is a modified version of the resume template found here:
+%-     http://www.cv-templates.info/2009/03/professional-cv-latex/
+%-
 
-% A Few Useful Packages
+%---------
+%- A Few Useful Packages
+%-
 \usepackage{marvosym}
-\usepackage{fontspec}               % for loading fonts
-\usepackage{url,parskip}            % for formatting
-\usepackage{xunicode,xltxtra}       % more for formatting
+\usepackage{url,parskip}
+\usepackage{xunicode,xltxtra}
 
+%---------
+%- Colors & Graphics
+%-
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[big]{layaureo}          % better formatting of the A4 page
+%- Note: An alternative to Layaureo can be ** \usepackage{fullpage} **
 
-% an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular}           % for Grades
 \usepackage{titlesec}               % custom \section
 
-%Setup hyperref package, and colours for links
+%----------
+%- Setup hyper-linking using HyperRef
+%-
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
-% Fonts
+%---------
+%- Font setup
+%-
+\usepackage{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 
 % CV Sections inspired by:
 %   http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{5pt}{5pt}
 
 \begin{document}
-
 \pagestyle{empty} % non-numbered pages
 
-%--------------- Title
+%---------
+%- Section: Title
+%-
 \par{\centering
-{\Huge Brandon \textsc{Sandrowicz} }
-\bigskip\par}
+    {\Huge Brandon \textsc{Sandrowicz} }
+    \bigskip\par}
 
-%--------------- Section: Personal Data
+%---------
+%- Section: Personal Data
+%-
 \section{Personal Data}
 \begin{tabular}{rl}
 \textsc{Place and Date of Birth:}       & Dearborn, MI, USA | 25 April 1982\\
@@ -52,43 +63,88 @@
 \textsc{Address:}                       & 1820 104th Ave Apt \#15, Portland, OR 97220\\
 \textsc{Phone:}                         & +1 503 481 3865\\
 \textsc{Email:}                         & \href{mailto:brandon@sandrowicz.org}{brandon@sandrowicz.org}\\
+\textsc{Github:}                        & \href{http://github.com/bsandrow}{github.com/bsandrow}\\
 \end{tabular}
 
-%--------------- Section: Work Experience
+%---------
+%- Section: Objective
+%-
+\section{Objective}
+Blah Blah Blah. Blah Blah Blah. Blah Blah Blah. Blah Blah Blah.
+
+%---------
+%- Section: Work Experience
+%-
 \section{Work Experience}
 \begin{tabular}{r|p{11cm}}
-% --------------------
-\emph{Current}      & Software Developer at Rentrak Corp., Portland, Oregon, USA\\
-\textsc{Aug 2008}   & \emph{Media data analysis and auditing}\\
-                    & \fontsize{9pt}{10pt}\selectfont
-                                    Software developer maintaining legacy systems utilizing a variety of languages
-                                    (e.g. C, Java, Perl, Python, Groovy) and technologies (e.g. Unify, Oracle,
-                                    Postgres, Apache) as well as developing new webapps to replace legacy systems
-                                    where there is a business case to do so. (In this sense, 'maintaining' includes
-                                    not just 'keeping it running' but making incremental improvements based on user
-                                    requests).\\
-\multicolumn{2}{c}{}\\ % clears the space between two jobs
-% --------------------
-\textsc{Mar 2007-Jul 2008}   & Customer Service Rep. for Seneca Niagara Casino, Niagara Falls, NY, USA\\
-                                &\emph{Gaming and Hospitality}\\
-                                & \fontsize{9pt}{10pt}\selectfont
-                                                Provided patrons with excellent customer service over the phone. Guided
-                                                customers through booking rooms, making special requests, and planning their
-                                                trips.\\
-\multicolumn{2}{c}{}\\ % clears the space between two jobs
-% --------------------
-\textsc{May-Dec 2005}   & System Administrator for Henry Dreyfuss Associates, Ann Arbor, MI USA\\
-                        &\emph{Industrial Design}\\
+    %---------
+    %- Rentrak
+    %-
+    \emph{Current}      & Software Developer at Rentrak Corp., Portland, Oregon, USA\\
+    \textsc{Aug 2008}   & \emph{Media data analysis and auditing}\\
                         & \fontsize{9pt}{10pt}\selectfont
-                                                Supported users in a Mac/PC environment, recovered old data from obsolete
-                                                storage mediums.\\
-\multicolumn{2}{c}{}\\ % clears the space between two jobs
+                                        Software developer maintaining legacy systems utilizing a variety of languages
+                                        (e.g. C, Java, Perl, Python, Groovy) and technologies (e.g. Unify, Oracle,
+                                        Postgres, Apache) as well as developing new webapps to replace legacy systems
+                                        where there is a business case to do so. (In this sense, 'maintaining' includes
+                                        not just 'keeping it running' but making incremental improvements based on user
+                                        requests).\\
+% Clear the space between jobs
+\multicolumn{2}{c}{}\\
+    %---------
+    %- Seneca Niagara Casino
+    %-
+    \textsc{Mar 2007-Jul 2008}   & Customer Service Rep. for Seneca Niagara Casino, Niagara Falls, NY, USA\\
+                                    &\emph{Gaming and Hospitality}\\
+                                    & \fontsize{9pt}{10pt}\selectfont
+                                                    Provided patrons with excellent customer service over the phone. Guided
+                                                    customers through booking rooms, making special requests, and planning their
+                                                    trips.\\
+% Clear the space between jobs
+\multicolumn{2}{c}{}\\
+    %---------
+    %- Henry Dreyfuss Associates
+    %-
+    \textsc{May-Dec 2005}   & System Administrator for Henry Dreyfuss Associates, Ann Arbor, MI USA\\
+                            &\emph{Industrial Design}\\
+                            & \fontsize{9pt}{10pt}\selectfont
+                                                    Supported users in a Mac/PC environment, recovered old data from obsolete
+                                                    storage mediums.\\
 \end{tabular}
 
-%--------------- Section: Education
-%--------------- Section: Skillz
+%---------
+%- Section: Education
+%_
+\section{Education}
+\begin{tabular}{rl}
+\textsc{Aug} 2005 & Bachelor of Computer Science in \textsc{Engineering}, \textbf{University of Michigan}\\
+\end{tabular}
+
+%---------
+%- Section: Technical Skills
+%-
+\section{Technical Skills}
+\begin{tabular}{rl}
+Basic Knowledge:        & \textsc{Haskell},
+                            \textsc{PostgreSQL},
+                            \textsc{PHP},
+                            \textsc{MatLab},
+                            \textsc{Oracle},
+                            \textsc{Lisp},
+                            \textsc{C++} \\
+Intermediate Knowledge: & \textsc{html},
+                            \textsc{C},
+                            \textsc{Java},
+                            \textsc{Perl},
+                            \textsc{Python},
+                            \textsc{sh/bash/zsh},
+                            \textsc{Javascript},
+                            \textsc{Linux}, \textsc{ubuntu} \\
+
+
+\end{tabular}
+
 %--------------- Section: Hobbies
-%--------------- Section: Objective
 
 \end{document}
 
