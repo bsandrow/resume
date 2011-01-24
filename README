@@ -6,10 +6,29 @@ GENERATING RESUME
     resume.pdf will be copied into the source root dir.
 
 MAKEFILE TARGETS
-    build-pdf    Builds the resume.pdf file.
-    clean        Cleans up intermediate build files.
+    build-pdf       Builds the resume.pdf file.
+    build-pdf-copy  cBuilds the resume.copy.pdf file.
+    fonts           Installed fonts/ to ~/.fonts/
+    clean           Cleans up intermediate build files.
 
 FILES
-    resume.cls
+    libraries/
+        Where I'm storing 3rd-party libraries that are used in the
+        resume-building. They are installed to include/, but I keep around the
+        packages that I installed from in this directory.
+
+    include/
+        Where required libraries that are not installed on the system go.
+
+    include/resume.cls
         A document-class for building a resume. Found via a blog post here:
         http://linux.dsplabs.com.au/resume-writing-example-latex-template-linux-curriculum-vitae-professional-cv-layout-format-text-p54/ 
+
+    build/
+        The directory where all of the output files of the PDF building process
+        end up.
+
+    fonts/
+        Fonts that are required for the resume. Run 'make fonts' to install
+        them locally to ~/.fonts where the build process will pick them up
+        from.
