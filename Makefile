@@ -7,17 +7,17 @@ TEXINPUTS  = .:$(includedir):
 
 export TEXINPUTS
 
-all: build-pdf
+all: resume.pdf resume.current.pdf
 
-build-pdf:
+resume.pdf: resume.tex
 	mkdir -p $(builddir)
 	$(latex_exe) --output-directory=$(builddir) resume.tex
 	cp $(builddir)/resume.pdf resume.pdf
 
-build-pdf-copy:
+resume.current.pdf: resume.current.tex
 	mkdir -p $(builddir)
-	$(latex_exe) --output-directory=$(builddir) resume.copy.tex
-	cp $(builddir)/resume.copy.pdf resume.copy.pdf
+	$(latex_exe) --output-directory=$(builddir) resume.current.tex
+	cp $(builddir)/resume.current.pdf resume.current.pdf
 
 fonts:
 	test -d "$(HOME)/.fonts" || mkdir -p "$(HOME)/.fonts"
