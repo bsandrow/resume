@@ -1,6 +1,6 @@
 .PHONY: all build-pdf clean fonts
 
-latex_exe  = xelatex
+LATEX      = xelatex
 builddir   = build
 includedir = ./include
 TEXINPUTS  = .:$(includedir):
@@ -11,7 +11,7 @@ all: resume.pdf resume.current.pdf
 
 resume.pdf: resume.tex
 	mkdir -p $(builddir)
-	$(latex_exe) --output-directory=$(builddir) resume.tex
+	$(LATEX) --output-directory=$(builddir) resume.tex
 	cp $(builddir)/resume.pdf resume.pdf
 
 resume.txt: resume.pdf
@@ -21,7 +21,7 @@ resume.txt: resume.pdf
 
 resume.current.pdf: resume.current.tex
 	mkdir -p $(builddir)
-	$(latex_exe) --output-directory=$(builddir) resume.current.tex
+	$(LATEX) --output-directory=$(builddir) resume.current.tex
 	cp $(builddir)/resume.current.pdf resume.current.pdf
 
 resume.current.txt: resume.current.pdf
