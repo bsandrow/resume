@@ -42,8 +42,18 @@ A brief description of the repo structure: ::
     fonts/      Non-standard fonts that are used in building resumes. They can
                 be installed to ~/.fonts with `make fonts`.
 
+    templates/  Templates in Jinja2 for building .tex files. Components that
+                are not meant to be used directly get a .j2 extention, while
+                components that *are* meant to be use directly end in .tex.
+                This makes it easy for make to auto-build it's dependency graph
+                without needing an explicit whitelist.
+
+    tools/      A place to drop helper scripts. The intention is to use helper
+                scripts to bolster Makefile targets, so calling these directly
+                shouldn't be necessary.
+
 References
 ----------
 
- * `resume.cls<http://linux.dsplabs.com.au/resume-writing-example-latex-template-linux-curriculum-vitae-professional-cv-layout-format-text-p54/>`
+ * `resume.cls <http://linux.dsplabs.com.au/resume-writing-example-latex-template-linux-curriculum-vitae-professional-cv-layout-format-text-p54/>`_
 
