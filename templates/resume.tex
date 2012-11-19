@@ -1,6 +1,6 @@
-\documentclass[a4paper,10pt]{article}
+{%  extends "base.j2" %}
 
-
+{% block header %}
     %---------
     %- ATTRIBUTION:
     %-
@@ -33,11 +33,9 @@
     %   http://stefano.italians.nl/archives/26
     \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
     \titlespacing{\section}{0pt}{5pt}{5pt}
+{% endblock %}
 
-
-\begin{document}
-
-
+{% block body %}
     \pagestyle{empty} % non-numbered pages
 
     % -- Title --
@@ -132,8 +130,4 @@
 
     \end{tabular}
 
-
-
-\end{document}
-
-% vim:ft=tex
+{% endblock %}

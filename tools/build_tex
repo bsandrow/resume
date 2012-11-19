@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+
+import os
+import os.path
+import sys
+
+import jinja2
+
+cwd    = os.getcwd()
+loader = jinja2.FileSystemLoader(['templates'])
+env    = jinja2.Environment(loader=loader)
+
+for tex in sys.argv[1:]:
+    filename = os.path.basename(tex)
+    template = env.get_template(filename)
+    with open(filename, 'rb+') as fh:
+        fh.write(template.render())
