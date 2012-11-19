@@ -1,31 +1,30 @@
-.PHONY: all build-pdf clean fonts
+.PHONY: build-pdfs clean fonts
 
 LATEX      = xelatex
-builddir   = build
-includedir = ./include
-TEXINPUTS  = .:$(includedir):
+BUILDDIR   = build
+INCLUDEDIR = ./include
 
+# Make sure that our 3rd-party resources are included
+TEXINPUTS = .:$(INCLUDEDIR):
 export TEXINPUTS
 
-all: resume.pdf resume.current.pdf
+PDFS = $(patsubst templates/%.tex,%.pdf,$(wildcard templates/*.tex))
 
-resume.pdf: resume.tex
-	mkdir -p $(builddir)
-	$(LATEX) --output-directory=$(builddir) resume.tex
-	cp $(builddir)/resume.pdf resume.pdf
+build-pdfs: $(PDFS)
 
-resume.txt: resume.pdf
-	pdftotext resume.pdf
-	@echo "**WARNING** The resultant file will likely need some"
-	@echo "            tweaking before it's presentable."
+test-pdfs:
+	@echo "\$$PDFS => $(PDFS)"
 
-resume.current.pdf: resume.current.tex
-	mkdir -p $(builddir)
-	$(LATEX) --output-directory=$(builddir) resume.current.tex
-	cp $(builddir)/resume.current.pdf resume.current.pdf
+%.pdf: %.tex
+	mkdir -p $(BUILDDIR)
+	$(LATEX) --output-directory=$(BUILDDIR) "$<"
+	cp $(BUILDDIR)/"$@" "$@"
 
-resume.current.txt: resume.current.pdf
-	pdftotext resume.current.pdf
+%.tex: templates/%.tex
+	./tools/build_tex "$(notdir $<)"
+
+%.txt: %.pdf
+	pdftotext "$<"
 	@echo "**WARNING** The resultant file will likely need some"
 	@echo "            tweaking before it's presentable."
 
