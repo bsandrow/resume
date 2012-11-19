@@ -1,4 +1,4 @@
-.PHONY: build-pdfs clean fonts
+.PHONY: all build-txts build-pdfs clean fonts
 
 LATEX      = xelatex
 BUILDDIR   = build
@@ -9,11 +9,16 @@ TEXINPUTS = .:$(INCLUDEDIR):
 export TEXINPUTS
 
 PDFS = $(patsubst templates/%.tex,%.pdf,$(wildcard templates/*.tex))
+TXTS = $(patsubst templates/%.tex,%.txt,$(wildcard templates/*.tex))
 
 build-pdfs: $(PDFS)
+build-txts: $(TXTS)
 
-test-pdfs:
+all: build-pdfs build-txts
+
+test-vars:
 	@echo "\$$PDFS => $(PDFS)"
+	@echo "\$$TXTS => $(TXTS)"
 
 %.pdf: %.tex
 	mkdir -p $(BUILDDIR)
