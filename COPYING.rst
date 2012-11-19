@@ -13,6 +13,10 @@ directories:
 are not my own works. Please refer to the relevant sources for proper
 license/copying information.
 
+The contents of docs/ are mostly source material, examples, etc that I used
+while constructing my template. I don't have source URLs for them. If anyone
+takes issue with this, please email me.
+
 References
 ----------
 * layaureo - http://www.ctan.org/tex-archive/macros/latex/contrib/layaureo
