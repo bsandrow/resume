@@ -52,8 +52,3 @@ A brief description of the repo structure: ::
                 scripts to bolster Makefile targets, so calling these directly
                 shouldn't be necessary.
 
-References
-----------
-
- * `resume.cls <http://linux.dsplabs.com.au/resume-writing-example-latex-template-linux-curriculum-vitae-professional-cv-layout-format-text-p54/>`_
-
