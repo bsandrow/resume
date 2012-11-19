@@ -1,62 +1,57 @@
+==================
 Brandon Sandrowicz
+==================
 
 Personal Data
-=============
-
+-------------
 Citizenship:         United States
 Immigration Status:  Permanent Resident (Canada)
-Address:             1820 104th Ave Apt #15, Portland, OR 97220
-Phone:               +1 503 516 6724
+Address:             25 Lambton Ave, Toronto, ON M6N 2S2
+Phone:               +1 647 960 3722
 Email:               brandon@sandrowicz.org
 Github:              github.com/bsandrow
 
-
 Objective
-=========
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ultricies mattis velit,
-id fermentum enim tristique nec. Mauris at eros a lacus viverra tempus vitae et lacus. Sed
-id nisl ligula. Morbi enim orci, sodales vitae feugiat vel, elementum vitae lorem. Cras eros
-nisi, semper nec laoreet quis, egestas a justo.
+---------
+Find a job where I can do at least two of the following things: (i) work with interesting
+people, (ii) work on solving interesting problems, (iii) work on building something great.
+I am geo-bound to the Toronto area, and am not considering remote work at the current
+time.
 
 Work Experience
-===============
+---------------
+    Aug 2008-Nov 2012   Software Developer at Rentrak Corp., Portland, Oregon, USA
+                        Media data analysis and auditing
 
-Current
-Aug 2008
+                        Software developer maintaining and extending legacy systems utilizing a
+                        variety of languages (e.g. C, Java, Perl, Python, Groovy) and technologies
+                        (e.g. Unify, Oracle, Postgres, Apache), as well as replacing legacy systems
+                        with web-based versions where necessary. Integrating competitor software
+                        obtained during a buyout. Creating small-scale data warehouse.  Creating
+                        transaction processing application to interact with POS software.
+                        Maintaining legacy internal GUI apps (Java 1.3). Maintaining legacy terminal
+                        UI apps (in C).
 
-Software Developer at Rentrak Corp., Portland, Oregon, USA
-Media data analysis and auditing
-    Software developer maintaining legacy systems utilizing a variety of
-    languages (e.g. C, Java, Perl, Python, Groovy) and technologies (e.g.
-    Unify, Oracle, Postgres, Apache) as well as developing new webapps to
-    replace legacy systems where there is a business case to do so. (In this
-    sense, ’maintaining’ includes not just ’keeping it running’ but making
-    incremental improvements based on user requests).
+    Mar 2007-Jul 2008   Customer Service Rep. for Seneca Niagara Casino, Niagara Falls, NY, USA
+                        Gaming and Hospitality
 
-Mar 2007-Jul 2008
+                        Provided patrons with excellent customer service over the phone. Guided
+                        customers through booking rooms, making special requests, and planning their
+                        trips.
 
-Customer Service Rep. for Seneca Niagara Casino, Niagara Falls, NY,
-USA
-Gaming and Hospitality
-    Provided patrons with excellent customer service over the phone. Guided
-    customers through booking rooms, making special requests, and planning
-    their trips.
+    May-Dec 2005        System Administrator for Henry Dreyfuss Associates, Ann Arbor, MI USA
+                        Industrial Design
 
-May-Dec 2005
-
-System Administrator for Henry Dreyfuss Associates, Ann Arbor, MI USA
-Industrial Design
-    Supported users in a Mac/PC environment, recovered old data from obsolete
-    storage mediums.
+                        Supported users in a Mac/PC environment, recovered old data from obsolete
+                        storage mediums.
 
 Education
-Aug 2005
-
-Bachelor of Computer Science in Engineering, University of Michigan
+---------
+    Aug 2005    Bachelor of Computer Science in Engineering, University of Michigan
 
 Technical Skills
-================
-
-Haskell, PostgreSQL, PHP, MatLab, Oracle, Lisp, C++, html, C, Java, Perl,
-Python, sh/bash/zsh, Javascript, Linux, Ubuntu
+----------------
+I have minimal/passing knowledge of: Haskell, PHP, MatLab, Lisp, C++
+Intermediate Knowledge:              C, Java, Oracle, PostgreSQL, Javascript
+Expert Knowledge:                    Python, git, html, Perl, sh/bash/zsh, Linux, Ubuntu
+
