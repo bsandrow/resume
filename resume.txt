@@ -51,7 +51,7 @@ Education
 
 Technical Skills
 ----------------
-I have minimal/passing knowledge of: Haskell, PHP, MatLab, Lisp, C++
-Intermediate Knowledge:              C, Java, Oracle, PostgreSQL, Javascript
-Expert Knowledge:                    Python, git, html, Perl, sh/bash/zsh, Linux, Ubuntu
+Dabbled in:   Haskell • PHP MatLab • Lisp • C++
+Worked with:  C • Java • Oracle • PostgreSQL • Javascript
+Use everyday: Python • git • html • Perl • sh/bash/zsh • Linux • Ubuntu
 
