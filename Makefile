@@ -16,6 +16,11 @@ build-txts: $(TXTS)
 
 all: build-pdfs build-txts
 
+ubuntu-deps:
+	@echo "Note: Only tested on Ubuntu 12.10..."
+	sudo apt-get install python-jinja2
+	sudo apt-get install texlive-xetex
+
 test-vars:
 	@echo "\$$PDFS => $(PDFS)"
 	@echo "\$$TXTS => $(TXTS)"
