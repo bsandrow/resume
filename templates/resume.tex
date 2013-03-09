@@ -19,6 +19,9 @@
 
     \usepackage{titlesec}               % custom \section
 
+    % Note: for tabular alignment
+    \usepackage{array}
+
     % -- Hyper-Linking --
     \usepackage{hyperref}
     \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -119,20 +122,18 @@
     % -- SECTION: TECHNICAL SKILLS --
     {% block technical_skills %}
         \section{Technical Skills}
-        \begin{tabular}{rl}
+        \begin{tabular}{ r p{11cm} }
         Dabbled in: & \textsc{Haskell} \symbol{"2022}
                       \textsc{PHP} \symbol{"2022}
                       \textsc{MatLab} \symbol{"2022}
                       \textsc{Lisp} \symbol{"2022}
                       \textsc{C++} \\
-        Worked with: & \textsc{C} \symbol{"2022}
-                        \textsc{Java} \symbol{"2022}
-                        \textsc{Oracle} \symbol{"2022}
-                        \textsc{PostgreSQL} \symbol{"2022}
-                        \textsc{sh/bash/zsh} \symbol{"2022}
-                        \textsc{Javascript} \symbol{"2022}
-                        \textsc{Chrome Extensions} \symbol{"2022}
-                        \textsc{CentOS} \\
+        Worked with: & \textsc{C} \symbol{"2022} \textsc{Java} \symbol{"2022}
+                                \textsc{Oracle} \symbol{"2022} \textsc{PostgreSQL} \symbol{"2022}
+                                \textsc{sh/bash/zsh} \symbol{"2022} \textsc{Javascript} \symbol{"2022}
+                                \textsc{jQuery} \symbol{"2022} \textsc{Chrome Extensions} \symbol{"2022}
+                                \textsc{CentOS}
+                        \\
         Use everyday: & \textsc{Python} \symbol{"2022}
                         \textsc{git} \symbol{"2022}
                         \textsc{HTML} \symbol{"2022}
