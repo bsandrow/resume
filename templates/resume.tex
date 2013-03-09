@@ -21,6 +21,7 @@
 
     % Note: for tabular alignment
     \usepackage{array}
+    \newcolumntype{R}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{ #1}}
 
     % -- Hyper-Linking --
     \usepackage{hyperref}
@@ -73,42 +74,67 @@
     % -- SECTION: WORK EXPERIENCE --
     {% block work_experience %}
         \section{Work Experience}
-        \begin{tabular}{r|p{11cm}}
+        \begin{tabular}{ R{1.5cm} | p{10.5cm} }
             %---------
             %- Rentrak
             %-
-            \textsc{Aug 2008-Nov 2012}  & Software Developer at Rentrak Corp., Portland, Oregon, USA\\
-                                        & \emph{Media data analysis and auditing}\\
-                                        & \fontsize{9pt}{10pt}\selectfont
-                                                Software developer maintaining and extending legacy systems utilizing a variety
-                                                of languages (e.g. C, Java, Perl, Python, Groovy) and technologies (e.g. Unify,
-                                                Oracle, Postgres, Apache), as well as replacing legacy systems with web-based
-                                                versions where necessary. Integrating competitor software obtained during a
-                                                buyout. Creating small-scale data warehouse. Creating transaction processing
-                                                application to interact with POS software. Maintaining legacy internal GUI apps
-                                                (Java 1.3). Maintaining legacy terminal UI apps (in C). \\
-        % Clear the space between jobs
-        \multicolumn{2}{c}{}\\
-            %---------
-            %- Seneca Niagara Casino
-            %-
-            \textsc{Mar 2007-Jul 2008}   & Customer Service Rep. for Seneca Niagara Casino, Niagara Falls, NY, USA\\
-                                            &\emph{Gaming and Hospitality}\\
-                                            & \fontsize{9pt}{10pt}\selectfont
-                                                            Provided patrons with excellent customer service over the phone. Guided
-                                                            customers through booking rooms, making special requests, and planning their
-                                                            trips.\\
-        % Clear the space between jobs
-        \multicolumn{2}{c}{}\\
+            \hfill \textsc{Aug 2008}\newline
+            \begin{center} to \end{center}
+            \hfill \textsc{Nov 2012} &
+                            Software Developer at Rentrak Corp.\newline
+                            Portland, Oregon, USA and Toronto, Ontario, Canada\newline
+                            \emph{Media data analysis and auditing} \newline
+                            \fontsize{9pt}{10pt}\selectfont
+                            \begin{itemize}
+                                \item Developed cross-platform application in Groovy to interact with POS
+                                    systems and transmit transaction information back to central server.
+                                \item Developed internal, threaded comment system for discussion of customer
+                                    interaction between separate business units (tech support, billing,
+                                    etc). Included transparent email notifications and replies, as well as
+                                    record keeping / dumping for legal purposes. Ported legacy comment
+                                    system data over to new system.
+                                \item Maintained internal legacy GUI applications written to Java 1.3, and
+                                    text UI applications in C, adding new features to changing business
+                                    requirements as necessary.
+                                \item Implemented competitor systems (obtained during an acquisition) within
+                                    existing internal frameworks, from data import/processing to
+                                    reporting, and data warehousing.
+                                \item Optimized database access as volume passed thresholds that reduced
+                                    performance to unacceptable levels.
+                                \item Created drag-and-drop admin interface using Javascript/jQuery for
+                                    adding, removing, and sorting marketing materials in our customer
+                                    portal.
+                                \item Created internal release tool on top of git with Python/Django.
+                            \end{itemize}
+                            \bigskip
+                            \begin{description}
+                                \item[Operating Systems:] Linux (CentOS), MS Windows
+                                \item[Databases:] Unify, Oracle, PostgreSQL
+                                \item[Languages:] Java, C, Groovy, Perl, Python, Pro*C
+                                \item[Software/Tools:] Vim, Emacs, Apache, Nginx, Django, SQL*Plus
+                            \end{description}
+                                    \\
+        \end{tabular}
+        \\\vspace{1em}\\
+        \begin{tabular}{ R{1.5cm} | p{10.5cm} }
             %---------
             %- Henry Dreyfuss Associates
             %-
-            \textsc{May-Dec 2005}   & System Administrator for Henry Dreyfuss Associates\\
-                                    & Ann Arbor, MI USA\\
-                                    &\emph{Industrial Design}\\
-                                    & \fontsize{9pt}{10pt}\selectfont
-                                                            Supported users in a Mac\slash PC environment, recovered old data from obsolete
-                                                            storage mediums.\\
+        \hfill \textsc{May 2005}\newline
+        \begin{center} to \end{center}
+        \hfill \textsc{Dec 2005} &
+                                System Administrator for Henry Dreyfuss Associates\newline
+                                Ann Arbor, MI USA\newline
+                                \emph{Industrial Design}\newline
+                                \begin{itemize}
+                                    \item Supported users in a Mac\slash PC environment.
+                                    \item Recovered old data from obsolete storage mediums.
+                                \end{itemize}
+                                \bigskip
+                                \begin{description}
+                                    \item[Operating Systems:] MS Windows, Mac OSX
+                                \end{description}
+                                \\
         \end{tabular}
     {% endblock %}
 
