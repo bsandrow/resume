@@ -84,11 +84,37 @@ Aug 2005
 Bachelor of Computer Science in Engineering, University of Michigan
 
 Technical Skills
-Python (incl. SQLAlchemy, Flask, py.test) • HTML • NodeJS • CSS • LESS • Sass • JavaScript
-• jQuery • AngularJS 1.x • Amazon Web Services • ElasticSearch • PostgreSQL • MySQL •
-Oracle • git • Linux • Perl • bash/zsh • PHP • MatLab • Lisp • EmberJS • C++
+PHP
+
+Python
+
+Perl
+
+Oracle
+
+MongoDB
+
+C++
+
+ShellScript
+
+ElasticSearch
+
+JavaScript
+
+Django
+
+Flask
 
 Other
 • Organizer for Pycon Canada 2013, 2015, and 2016
+
+TypeScript
+
+MySQL
+
+PostgreSQL
+
+Django Rest Framework
 
 
