@@ -1,80 +1,94 @@
-==================
-Brandon Sandrowicz
-==================
-
+Brandy Sandrowicz
 Personal Data
--------------
-Citizenship:         United States
-Immigration Status:  Permanent Resident (Canada)
-Address:             25 Lambton Ave, Toronto, ON M6N 2S2
-Phone:               +1 647 960 3722
-Email:               brandon@sandrowicz.org
-Github:              github.com/bsandrow
+Work Status in:
+Address:
+Phone:
+Email:
+Github:
+
+United States, Canada
+25 Lambton Ave, Toronto, ON M6N 2S2
++1 647 882 2056
+brandy@sandrowicz.org
+github.com/bsandrow
 
 Objective
----------
 Find a job where I can do at least two of the following things: (i) work with interesting
-people, (ii) work on solving interesting problems, (iii) work on building something great.
-I am geo-bound to the Toronto area, and am not considering relocating at this time.
+people, (ii) work on solving interesting problems, (iii) work on building something great. I
+am geo-bound to the Toronto area, and am not considering relocating at this time.
 
 Work Experience
----------------
-    Oct 2013 - Present
-    
-        Lead Software Developer at Sowingo.com Corp., Toronto, Ontario, Canada
-        Dental Supply Management
+Mar 2018
+to
+May 2023
 
-        • Built an eCommerce platform allowing sales from 3rd party vendors from
-          the ground-up.
-        • Built an inventory management system with specialization in tracking
-          oral surgery supplies from scratch.
-        • Built single page app administration system site admins and 3rd party
-          vendors.
-        • Built a custom PDF generation system for creating shelving labels.
+Software Developer at d1g1t Inc.
+Toronto, Ontario, Canada
+Financial Software for Money Management Firms
+• Built a risk level reporting system for money managers with the support of company’s financial engineers.
+• Worked on both the Python backend and the React front-end systems.
+• Built and maintained a system that capable of rebalancing 1000’s of
+financial accounts to match user specified parameters while taking
+into account various trading restrictions.
+• Built and maintained a system for managing trades and batches of
+trades to be sent to trading systems for execution including processing allocation on receipt of trades.
+• Maintained a system that managed transactions for all customer accounts and built them into various levels of reporting for both money
+managers and their clients.
+Technologies Utilized: Docker, PostgreSQL, MongoDB, ElasticSearch,
+Python, AWS, Django, Django Rest Framework, Celery, Redis, React.js,
+JavaScript
 
-          Technologies Utilized
-          ---------------------
-          PostgreSQL, MySQL, Amazon Web Services (EB, S3, EC2, Route53, RDS, VPC,
-          CloudFront, SQS), Flask-RESTful, Python, Flask, Nginx, Ubuntu Linux,
-          ElasticSearch, SQLAlchemy, Stripe, AngularJS 1.x, GulpJS, GruntJS,
-          Angular-Material, HTML, CSS, JavaScript/ECMAScript, EmberJS, Bootstrap,
-          LESS, Sass, git, TravisCI, py.test
+Oct 2013
+to
+Mar 2018
 
-    Aug 2008 - Nov 2012
-    
-        Software Developer at Rentrak Corp., Portland, Oregon, USA and Toronto, Ontario, Canada
-        Media data analysis and auditing
+Lead Software Developer at Sowingo.com Corp.
+Toronto, Ontario, Canada
+Dental Supply Management
+• Built an eCommerce platform allowing sales from 3rd party vendors
+from the ground-up.
+• Built an inventory management system with specialization in tracking oral surgery supplies from scratch.
+• Built single page app administration system site admins and 3rd party
+vendors.
+• Built a custom PDF generation system for creating shelving labels.
+Technologies Utilized: PostgreSQL, MySQL, Amazon Web Services (EB, S3,
+EC2, Route53, RDS, VPC, CloudFront, SQS), Flask-RESTful, Python, Flask,
+Nginx, Ubuntu Linux, ElasticSearch, SQLAlchemy, Stripe, AngularJS 1.x,
+GulpJS, GruntJS, Angular-Material, HTML, CSS, JavaScript/ECMAScript,
+EmberJS, Bootstrap, LESS, Sass, git, TravisCI, py.test
 
-        • Developed cross-platform application in Groovy to interact with POS systems and transmit
-          transaction information back to central server.
-        • Developed internal CRM to facilitate multiple business units’ interactions with customers,
-          including an email gateway, threaded comments, and porting of legacy CRM data.
-        • Maintained legacy internal applications (including GUIs in Java 1.3, and ’green screens’
-          in C), including adding new features as required.
-        • Ported competing system (obtained via acquisition) within existing systems, including
-          data import, reporting system changes and data warehousing.
-        • Optimized database access as volume passed thresholds that reduced performance to unacceptable
-          levels.
-        • Implemented marketing materials admin interface in HTML/JS, including drag-and-drop sorting.
-        • Created internal release tool on top of git with Python/Django.
+Aug 2008
+to
+Nov 2012
 
-        Technologies Utilized:
-        ----------------------
-        Linux (CentOS), MS Windows, Unify, Oracle, PostgreSQL, Java, C, Groovy, Perl, Python, Pro*C, Vim,
-        Emacs, Apache, Nginx, Django, SQL*Plus
-                        
+Software Developer at Rentrak Corp.
+Portland, Oregon, USA and Toronto, Ontario, Canada
+Media data analysis and auditing
+• Developed cross-platform application in Groovy to interact with POS
+systems and transmit transaction information back to central server.
+• Developed internal CRM to facilitate multiple business units’ interactions with customers, including an email gateway, threaded comments, and porting of legacy CRM data.
+• Maintained legacy internal applications (including GUIs in Java 1.3,
+and ’green screens’ in C), including adding new features as required.
+• Ported competing system (obtained via acquisition) within existing
+systems, including data import, reporting system changes and data
+warehousing.
+• Optimized database access as volume passed thresholds that reduced
+performance to unacceptable levels.
+• Implemented marketing materials admin interface in HTML/JS, including drag-and-drop sorting.
+• Created internal release tool on top of git with Python/Django.
+Technologies Utilized: Linux (CentOS), MS Windows, Unify, Oracle, PostgreSQL, Java, C, Groovy, Perl, Python, Pro*C, Vim, Emacs, Apache, Nginx, Django, SQL*Plus
 
 Education
----------
+Aug 2005
 
-    Aug 2005    Bachelor of Computer Science in Engineering, University of Michigan
+Bachelor of Computer Science in Engineering, University of Michigan
 
 Technical Skills
-----------------
 Python (incl. SQLAlchemy, Flask, py.test) • HTML • NodeJS • CSS • LESS • Sass • JavaScript
 • jQuery • AngularJS 1.x • Amazon Web Services • ElasticSearch • PostgreSQL • MySQL •
 Oracle • git • Linux • Perl • bash/zsh • PHP • MatLab • Lisp • EmberJS • C++
 
 Other
------
 • Organizer for Pycon Canada 2013, 2015, and 2016
+
+
