@@ -1,0 +1,16 @@
+# -- Base Packages --
+texliveonfly
+xelatex
+adjustbox
+tcolorbox
+collectbox
+ucs
+environ
+trimspaces
+titling
+enumitem
+rsfs
+
+# -- Specific Packages --
+marvosym
+titlesec
