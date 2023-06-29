@@ -1,4 +1,4 @@
-.PHONY: all build-txts build-pdfs clean fonts
+.PHONY: all build-txts build-pdfs clean install-fonts install-deps setup
 
 LATEX      = xelatex
 BUILDDIR   = build
@@ -15,11 +15,6 @@ build-pdfs: $(PDFS)
 build-txts: $(TXTS)
 
 all: build-pdfs build-txts
-
-ubuntu-deps:
-	@echo "Note: Only tested on Ubuntu 12.10..."
-	sudo apt-get install python-jinja2
-	sudo apt-get install texlive-xetex
 
 test-vars:
 	@echo "\$$PDFS => $(PDFS)"
@@ -38,8 +33,13 @@ test-vars:
 	@echo "**WARNING** The resultant file will likely need some"
 	@echo "            tweaking before it's presentable."
 
-fonts:
+install-deps:
+	./tools/install-deps.sh
+
+install-fonts:
 	./tools/install-fonts.sh
+
+setup: install-deps install-fonts
 
 clean:
 	rm -rf build/
