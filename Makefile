@@ -39,9 +39,7 @@ test-vars:
 	@echo "            tweaking before it's presentable."
 
 fonts:
-	test -d "$(HOME)/.fonts" || mkdir -p "$(HOME)/.fonts"
-	test ! -d "fonts" || cp -v fonts/*/* "$(HOME)/.fonts/"
-	fc-cache -fv
+	./tools/install-fonts.sh
 
 clean:
 	rm -rf build/
