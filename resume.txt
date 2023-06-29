@@ -84,37 +84,35 @@ Aug 2005
 Bachelor of Computer Science in Engineering, University of Michigan
 
 Technical Skills
-PHP
-
 Python
 
 Perl
-
-Oracle
-
-MongoDB
-
-C++
-
-ShellScript
-
-ElasticSearch
-
-JavaScript
-
-Django
-
-Flask
-
-Other
-• Organizer for Pycon Canada 2013, 2015, and 2016
-
-TypeScript
 
 MySQL
 
 PostgreSQL
 
+Flask
+
+PHP
+
+C++
+Oracle
+
+ShellScript
+MongoDB
+
 Django Rest Framework
+
+Other
+• Organizer for Pycon Canada 2013, 2015, and 2016
+
+JavaScript
+
+TypeScript
+
+ElasticSearch
+
+Django
 
 
