@@ -52,20 +52,12 @@
     % \definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
     % \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
 
-    % -- Create a tcbox that fits to the text better. --
-    % Source: https://tex.stackexchange.com/questions/616277/how-to-set-an-inline-tcbox-height-to-a-fixed-height-1em
-    %
-    % \newcommand\pstrut{\rule[-1pt]{0pt}{.8em}}
     \newtcbox{\tagbox}{
         colback=TagBG,
         colframe=TagBorder,
         on line,  % make then inline
-        % boxrule=0pt,
-        % boxsep=0pt,
-        height=14pt,
-        top=2pt, left=2pt, bottom=2pt, right=2pt,  % margins
+        height=18pt,
         valign=center,
-        % fontupper={\pstrut}
     }
 
     % ---[ END "Tag" Boxes ]---
@@ -77,9 +69,9 @@
 
     % -- SECTION: TITLE --
     
-        \par{\centering
-            {\Huge Brandy Sandrowicz }
-            \bigskip\par}
+    \par{\centering
+        {\Huge Brandy Sandrowicz }
+        \bigskip\par}
     
 
     % -- SECTION: PERSONAL DATA --
@@ -214,8 +206,7 @@
     % -- SECTION: TECHNICAL SKILLS --
     
         \section{Technical Skills}
-
-        \tagbox{Python} \tagbox{Perl} \tagbox{PHP} \tagbox{C++} \tagbox{ShellScript} \tagbox{JavaScript} \tagbox{TypeScript}
+        \tagbox{Python} \tagbox{Perl} \tagbox{PHP} \tagbox{C++} \tagbox{ShellScript} \tagbox{JavaScript} \tagbox{TypeScript}\newline
         \tagbox{MySQL} \tagbox{PostgreSQL} \tagbox{Oracle} \tagbox{MongoDB} \tagbox{ElasticSearch}
         \tagbox{Django} \tagbox{Flask} \tagbox{Django Rest Framework}
 
