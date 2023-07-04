@@ -8,16 +8,17 @@ $PYTHON <<EOF
 import json
 
 import jinja2
+import yaml
 
 env = jinja2.Environment(
     variable_start_string = "\VAR{",
     variable_end_string = "}",
-    loader=jinja2.FileSystemLoader(['.']),
-    # loader=jinja2.FileSystemLoader(['.', 'templates']),
+    # loader=jinja2.FileSystemLoader(['.']),
+    loader=jinja2.FileSystemLoader(['.', 'templates']),
 )
 
-with open("data.json", "r") as fh:
-    data = json.loads(fh.read())
+with open("data.yaml", "r") as fh:
+    data = yaml.safe_load(fh.read())
 
 template = env.get_template("resume.tex.j2")
 with open("resume.tex", "w") as fh:

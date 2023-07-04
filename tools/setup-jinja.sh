@@ -13,3 +13,4 @@ if [[ ! -d "$VENV" ]]; then
 fi
 run source "$VENV/bin/activate"
 run pip install jinja2
+run pip install pyyaml
