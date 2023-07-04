@@ -25,7 +25,7 @@ test-vars:
 	$(LATEX) --output-directory=$(BUILDDIR) "$<"
 	cp $(BUILDDIR)/"$@" "$@"
 
-%.tex: templates/%.tex
+%.tex: %.tex.j2
 	./tools/build_tex "$(notdir $<)"
 
 %.txt: %.pdf

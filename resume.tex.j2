@@ -70,7 +70,7 @@
     % -- SECTION: TITLE --
     
     \par{\centering
-        {\Huge Brandy Sandrowicz}
+        {\Huge \VAR{name}}
         \bigskip\par}
     
 
@@ -79,10 +79,10 @@
         \section{Personal Data}
         \begin{tabular}{ r l }
         \textsc{Work Status in:}                & United States, Canada\\
-        \textsc{Address:}                       & 25 Lambton Ave, Toronto, Ontario M6N 2S2\\
-        \textsc{Phone:}                         & +1 647 882 2056\\
-        \textsc{Email:}                         & \href{mailto:brandy@sandrowicz.org}{brandy@sandrowicz.org}\\
-        \textsc{Github:}                        & \href{https://github.com/bsandrow}{github.com/bsandrow}\\
+        \textsc{Address:}                       & \VAR{address.street}, \VAR{address.city}, \VAR{address.state} \VAR{address.postal_code}\\
+        \textsc{Phone:}                         & \VAR{phone.cell}\\
+        \textsc{Email:}                         & \href{mailto:\VAR{email}}{\VAR{email}}\\
+        \textsc{Github:}                        & \href{\VAR{github.url}}{github.com/\VAR{github.username}}\\
         \end{tabular}
     
 

@@ -1,0 +1,17 @@
+{
+    "name": "Brandy Sandrowicz",
+    "email": "brandy@sandrowicz.org",
+    "github": {
+        "url": "https://github.com/bsandrow",
+        "username": "bsandrow"
+    },
+    "phone": {
+        "cell": "+1 647 882 2056"
+    },
+    "address": {
+        "street": "25 Lambton Ave",
+        "city": "Toronto",
+        "state": "Ontario",
+        "postal_code": "M6N 2S2"
+    }
+}
