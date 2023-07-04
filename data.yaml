@@ -18,21 +18,24 @@ objective: >
     not considering relocating at this time.
 
 skills:
-    - Python
-    - Perl
-    - PHP
-    - C++
-    - ShellScript
-    - JavaScript
-    - TypeScript
-    - MySQL
-    - PostgreSQL
-    - Oracle
-    - MongoDB
-    - ElasticSearch
-    - Django
-    - Flask
-    - Django Rest Framework
+    - 
+      - Python
+      - Perl
+      - PHP
+      - C++
+      - ShellScript
+      - JavaScript
+      - TypeScript
+    -
+      - MySQL
+      - PostgreSQL
+      - Oracle
+      - MongoDB
+      - ElasticSearch
+    -
+      - Django
+      - Flask
+      - Django Rest Framework
 
 hobbies:
     - Organizer for Pycon Canada 2013, 2015, and 2016
@@ -40,7 +43,7 @@ hobbies:
 education:
     - month: Aug
       year: 2005
-      title: Bachelor of Computer Science in \textsc{Engineering}
+      title: Bachelor of Computer Science in Engineering
       school: University of Michigan
 
 employment:

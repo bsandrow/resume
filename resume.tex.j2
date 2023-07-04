@@ -130,8 +130,8 @@
     % -- SECTION: TECHNICAL SKILLS --
     
         \section{Technical Skills}
-        \BLOCK{for tag in skills-}
-        \tagbox(\VAR{tag})
+        \BLOCK{for line in skills-}
+            \BLOCK{for tag in line}\tagbox{\VAR{tag}} \BLOCK{endfor}\newline
         \BLOCK{-endfor}
 
     % -- SECTION: HOBBIES --
