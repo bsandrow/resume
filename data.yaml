@@ -11,8 +11,138 @@ address:
     city: Toronto
     state: Ontario
     postal_code: M6N 2S2
-objective: |
+objective: >
     Find a job where I can do at least two of the following things: (i) work with
     interesting people, (ii) work on solving interesting problems, (iii) work on
     building something great. I am geo-bound to the Toronto area, and am
     not considering relocating at this time.
+
+skills:
+    - Python
+    - Perl
+    - PHP
+    - C++
+    - ShellScript
+    - JavaScript
+    - TypeScript
+    - MySQL
+    - PostgreSQL
+    - Oracle
+    - MongoDB
+    - ElasticSearch
+    - Django
+    - Flask
+    - Django Rest Framework
+
+hobbies:
+    - Organizer for Pycon Canada 2013, 2015, and 2016
+
+education:
+    - month: Aug
+      year: 2005
+      title: Bachelor of Computer Science in \textsc{Engineering}
+      school: University of Michigan
+
+employment:
+    - company:
+        name: d1g1t Inc.
+        url: https://www.d1g1t.com/
+        location: Toronto, Ontario, Canada
+        summary: Financial Software for Money Management Firms
+      position: Software Developer
+      start: Mar 2018
+      end: May 2023
+      things:
+        - Built a risk level reporting system for money managers with the support of company's financial engineers.
+        - Worked on both the Python backend and the React front-end systems.
+        - Built and maintained a system that capable of rebalancing 1000's of financial accounts to match user specified parameters while taking into account various trading restrictions.
+        - Built and maintained a system for managing trades and batches of trades to be sent to trading systems for execution including processing allocation on receipt of trades.
+        - Maintained a system that managed transactions for all customer accounts and built them into various levels of reporting for both money managers and their clients.
+      technologies: 
+        - Docker
+        - PostgreSQL
+        - MongoDB
+        - ElasticSearch
+        - Python
+        - AWS
+        - Django
+        - Django Rest Framework
+        - Celery
+        - Redis
+        - React.js
+        - JavaScript
+
+    - company:
+        name: Sowingo.com Corp.
+        url: https://sowingo.com/
+        location: Toronto, Ontario, Canada
+        summary: Dental Supply Management and Marketplace
+      position: Lead Software Developer
+      start: Oct 2013
+      end: Mar 2018
+      things:
+        - Built an eCommerce platform allowing sales from 3rd party vendors from the ground-up.
+        - Built an inventory management system with specialization in tracking oral surgery supplies from scratch.
+        - Built single page app administration system site admins and 3rd party vendors.
+        - Built a custom PDF generation system for creating shelving labels.
+      technologies:
+        - PostgreSQL
+        - MySQL
+        - Amazon Web Services (EB, S3, EC2, Route53, RDS, VPC, CloudFront, SQS),
+        - Flask-RESTful
+        - Python
+        - Flask
+        - Nginx
+        - Ubuntu Linux
+        - ElasticSearch
+        - SQLAlchemy
+        - Stripe
+        - AngularJS 1.x
+        - GulpJS
+        - GruntJS
+        - Angular-Material
+        - HTML
+        - CSS
+        - JavaScript/ECMAScript
+        - EmberJS
+        - Bootstrap
+        - LESS
+        - Sass
+        - git
+        - TravisCI
+        - py.test
+
+    - company:
+        name: Rentrak Corp.
+        url: https://en.wikipedia.org/wiki/Rentrak
+        location: Portland, Oregon, USA and Toronto, Ontario, Canada
+        summary: Media data analysis and auditing
+      position: Software Developer
+      start: Aug 2008
+      end: Nov 2012
+      things:
+        - Developed cross-platform application in Groovy to interact with POS systems and transmit transaction information back to central server.
+        - Developed internal CRM to facilitate multiple business units' interactions with customers, including an email gateway, threaded comments, and porting of legacy CRM data.
+        - Maintained legacy internal applications (including GUIs in Java 1.3, and 'green screens' in C), including adding new features as required.
+        - Ported competing system (obtained via acquisition) within existing systems, including data import, reporting system changes and data warehousing.
+        - Optimized database access as volume passed thresholds that reduced performance to unacceptable levels.
+        - Implemented marketing materials admin interface in HTML/JS, including drag-and-drop sorting.
+        - Created internal release tool on top of git with Python/Django.
+      technologies:
+        - Linux (CentOS)
+        - MS Windows
+        - Unify
+        - Oracle
+        - PostgreSQL,
+        - Java
+        - C
+        - Groovy
+        - Perl
+        - Python
+        - Pro*C
+        - Vim
+        - Emacs
+        - Apache
+        - Nginx
+        - Django
+        - SQL*Plus
