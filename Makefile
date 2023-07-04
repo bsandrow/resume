@@ -1,4 +1,4 @@
-.PHONY: all build-txts build-pdfs clean install-fonts install-deps setup
+.PHONY: all build-txts build-pdfs clean setup
 
 LATEX      = xelatex
 BUILDDIR   = build
@@ -33,13 +33,21 @@ test-vars:
 	@echo "**WARNING** The resultant file will likely need some"
 	@echo "            tweaking before it's presentable."
 
-install-deps:
-	./tools/install-deps.sh
+setup:
+	@echo
+	@echo "-!- Installing LaTeX Dependencies -!-"
+	@echo
+	@./tools/install-deps.sh
 
-install-fonts:
-	./tools/install-fonts.sh
+	@echo
+	@echo "-!- Installing Required Fonts -!-"
+	@echo
+	@./tools/install-fonts.sh
 
-setup: install-deps install-fonts
+	@echo
+	@echo "-!- Setting up Jinja2 -!-"
+	@echo
+	@./tools/setup-jinja.sh
 
 clean:
 	rm -rf build/

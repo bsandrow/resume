@@ -3,22 +3,34 @@
 # Install required OTF/TTF fonts
 #
 
+function run() {
+    echo "[✨] $@"
+    "$@"
+}
+
+function copy_fonts() {
+    fontdir=$1
+    echo "[📦] Installing fonts to '$fontdir'..."
+    for FONT in fonts/*/*; do
+        echo " -> $(basename $FONT)"
+        cp "$FONT" "$fontdir"
+    done
+}
+
 case $OSTYPE in
     linux-gnu*)
 
-        echo "Installing fonts..."
         FONTDIR="${HOME}/.fonts"
-        mkdir -p $FONTDIR
-        cp -v fonts/*/* $FONTDIR/
-        fc-cache -fv
+        run mkdir -p $FONTDIR
+        copy_fonts $FONTDIR
+        run fc-cache -fv
         ;;
 
     darwin*)
 
-        echo "Installing fonts..."
         FONTDIR="${HOME}/Library/Fonts"
-        mkdir -p $FONTDIR
-        cp -v fonts/*/* $FONTDIR/
+        run mkdir -p $FONTDIR
+        copy_fonts $FONTDIR
         ;;
 
     *)

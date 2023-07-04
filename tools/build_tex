@@ -1,15 +1,26 @@
-#!/usr/bin/env python
+#!/bin/bash
+#
 
-import os.path
-import sys
+PYTHON=".venv/bin/python3"
+$PYTHON <<EOF
+#!/usr/bin/env python3
+
+import json
 
 import jinja2
 
-loader = jinja2.FileSystemLoader(['templates'])
-env    = jinja2.Environment(loader=loader)
+env = jinja2.Environment(
+    variable_start_string = "\VAR{",
+    variable_end_string = "}",
+    loader=jinja2.FileSystemLoader(['.']),
+    # loader=jinja2.FileSystemLoader(['.', 'templates']),
+)
 
-for tex in sys.argv[1:]:
-    filename = os.path.basename(tex)
-    template = env.get_template(filename)
-    with open(filename, 'wb+') as fh:
-        fh.write(template.render())
+with open("data.json", "r") as fh:
+    data = json.loads(fh.read())
+
+template = env.get_template("resume.tex.j2")
+with open("resume.tex", "w") as fh:
+    fh.write(template.render(**data))
+EOF
+
