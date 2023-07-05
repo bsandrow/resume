@@ -11,7 +11,7 @@ function run() {
 function copy_fonts() {
     fontdir=$1
     echo "[📦] Installing fonts to '$fontdir'..."
-    for FONT in fonts/*/*; do
+    for FONT in fonts/*/*.otf; do
         echo " -> $(basename $FONT)"
         cp "$FONT" "$fontdir"
     done
