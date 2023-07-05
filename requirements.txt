@@ -12,5 +12,14 @@ enumitem
 rsfs
 
 # -- Specific Packages --
-marvosym
-titlesec
+# marvosym
+# titlesec
+moderncv
+fontawesome5
+academicons
+multirow
+arydshln
+changepage
+
+# -- Fonts --
+lm

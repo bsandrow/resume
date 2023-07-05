@@ -1,183 +1,81 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic} 
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
 
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
 
-    % Change the bottom margin
-    \usepackage[bottom = 2.50cm]{geometry}
-
-    %---------
-    %- ATTRIBUTION:
-    %-
-    %- This is a modified version of the resume template found here:
-    %-     http://www.cv-templates.info/2009/03/professional-cv-latex/
-    %-
-
-    \usepackage{marvosym}
-    \usepackage{url,parskip}
-    \usepackage{xunicode,xltxtra}
-
-    \RequirePackage{color,graphicx}
-    \usepackage[usenames,dvipsnames]{xcolor}
-    \usepackage[big]{layaureo}          % better formatting of the A4 page
-    %- Note: An alternative to Layaureo can be ** \usepackage{fullpage} **
-
-    \usepackage{titlesec}               % custom \section
-
-    % Note: for tabular alignment
-    \usepackage{array}
-    \newcolumntype{R}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{ #1}}
-
-    % -- Hyper-Linking --
-    \usepackage{hyperref}
-    \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-    \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-
-    % -- Font Setup --
-    \usepackage{fontspec}
-    \defaultfontfeatures{Mapping=tex-text}
-    \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-
-    % CV Sections inspired by:
-    %   http://stefano.italians.nl/archives/26
-    \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-    \titlespacing{\section}{0pt}{5pt}{5pt}
-
-    % ---[ "Tag" Boxes ]---
-    %
-    % Source: https://tex.stackexchange.com/questions/311934/lets-get-fancy-text-like-tag
-    %
-    \usepackage[skins]{tcolorbox}
-    \definecolor{TagBG}{RGB}{221, 234, 249}
-    \definecolor{TagBorder}{rgb}{0.74, 0.83, 0.9}
-    % \definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
-    % \definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
-    % \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
-
-    \newtcbox{\tagbox}{
-        colback=TagBG,
-        colframe=TagBorder,
-        on line,  % make then inline
-        height=18pt,
-        valign=center,
-    }
-
-    % ---[ END "Tag" Boxes ]---
+% == Personal Data ==
+\name{Brandy}{Sandrowicz}
+\title{Software Developer}
+\phone[mobile]{+1 647 882 2056}
+\email{brandy@sandrowicz.org}
+\social[github]{bsandrow}
 
 \begin{document}
+\makecvtitle
+
+\section{Education}
+
+\cventry{Aug 2005}{Bachelor of Computer Science in Engineering}{University of Michigan}{}{}{}
 
 
-    \pagestyle{empty} % non-numbered pages
+\section{Experience}
 
-    % -- SECTION: TITLE --
-    
-    \par{\centering
-        {\Huge Brandy Sandrowicz}
-        \bigskip\par}
-    
+\cventry[2em]{2018--2023}{Software Developer}{d1g1t Inc.}{Toronto}{}{%
+Financial Software for Money Management Firms\newline{}%
+\begin{itemize}%
+\item Built a risk level reporting system for money managers with the support of company's financial engineers.
+\item Worked on both the Python backend and the React front-end systems.
+\item Built and maintained a system that capable of rebalancing 1000's of financial accounts to match user specified parameters while taking into account various trading restrictions.
+\item Built and maintained a system for managing trades and batches of trades to be sent to trading systems for execution including processing allocation on receipt of trades.
+\item Maintained a system that managed transactions for all customer accounts and built them into various levels of reporting for both money managers and their clients.
+\end{itemize}%
+}
 
-    % -- SECTION: PERSONAL DATA --
-    
-        \section{Personal Data}
-        \begin{tabular}{ r l }
-        \textsc{Work Status in:}                & United States, Canada\\
-        \textsc{Address:}                       & 25 Lambton Ave, Toronto, Ontario M6N 2S2\\
-        \textsc{Phone:}                         & +1 647 882 2056\\
-        \textsc{Email:}                         & \href{mailto:brandy@sandrowicz.org}{brandy@sandrowicz.org}\\
-        \textsc{Github:}                        & \href{https://github.com/bsandrow}{github.com/bsandrow}\\
-        \end{tabular}
-    
+\cventry[2em]{2013--2018}{Lead Software Developer}{Sowingo.com Corp.}{Toronto}{}{%
+Dental Supply Management and Marketplace\newline{}%
+\begin{itemize}%
+\item Built an eCommerce platform allowing sales from 3rd party vendors from the ground-up.
+\item Built an inventory management system with specialization in tracking oral surgery supplies from scratch.
+\item Built single page app administration system site admins and 3rd party vendors.
+\item Built a custom PDF generation system for creating shelving labels.
+\end{itemize}%
+}
 
-    % -- SECTION: OBJECTIVE --
-    
-        \section{Objective}
-        Find a job where I can do at least two of the following things: (i) work with interesting people, (ii) work on solving interesting problems, (iii) work on building something great. I am geo-bound to the Toronto area, and am not considering relocating at this time.
-
-
-    % -- SECTION: WORK EXPERIENCE --
-    
-        \section{Work Experience}
-        \begin{tabular}{ R{1.5cm} | p{10.5cm} }
-            \hfill \textsc{Mar 2018}\newline \begin{center} to \end{center} \hfill \textsc{May 2023} &
-            Software Developer at \href{https://www.d1g1t.com/}{d1g1t Inc.}\newline
-            Toronto, Ontario, Canada\newline
-            \emph{Financial Software for Money Management Firms} \newline
-            \fontsize{9pt}{10pt}\selectfont
-            \begin{itemize}
-                \item Built a risk level reporting system for money managers with the support of company's financial engineers.
-                \item Worked on both the Python backend and the React front-end systems.
-                \item Built and maintained a system that capable of rebalancing 1000's of financial accounts to match user specified parameters while taking into account various trading restrictions.
-                \item Built and maintained a system for managing trades and batches of trades to be sent to trading systems for execution including processing allocation on receipt of trades.
-                \item Maintained a system that managed transactions for all customer accounts and built them into various levels of reporting for both money managers and their clients.
-            \end{itemize}
-            \bigskip
-            \begin{description}
-                \item[Technologies Utilized:]
-                Docker, PostgreSQL, MongoDB, ElasticSearch, Python, AWS, Django, Django Rest Framework, Celery, Redis, React.js, JavaScript
-            \end{description}
-        \end{tabular}
-        \\\begin{tabular}{ R{1.5cm} | p{10.5cm} }
-            \hfill \textsc{Oct 2013}\newline \begin{center} to \end{center} \hfill \textsc{Mar 2018} &
-            Lead Software Developer at \href{https://sowingo.com/}{Sowingo.com Corp.}\newline
-            Toronto, Ontario, Canada\newline
-            \emph{Dental Supply Management and Marketplace} \newline
-            \fontsize{9pt}{10pt}\selectfont
-            \begin{itemize}
-                \item Built an eCommerce platform allowing sales from 3rd party vendors from the ground-up.
-                \item Built an inventory management system with specialization in tracking oral surgery supplies from scratch.
-                \item Built single page app administration system site admins and 3rd party vendors.
-                \item Built a custom PDF generation system for creating shelving labels.
-            \end{itemize}
-            \bigskip
-            \begin{description}
-                \item[Technologies Utilized:]
-                PostgreSQL, MySQL, Amazon Web Services (EB, S3, EC2, Route53, RDS, VPC, CloudFront, SQS),, Flask-RESTful, Python, Flask, Nginx, Ubuntu Linux, ElasticSearch, SQLAlchemy, Stripe, AngularJS 1.x, GulpJS, GruntJS, Angular-Material, HTML, CSS, JavaScript/ECMAScript, EmberJS, Bootstrap, LESS, Sass, git, TravisCI, py.test
-            \end{description}
-        \end{tabular}
-        \\\begin{tabular}{ R{1.5cm} | p{10.5cm} }
-            \hfill \textsc{Aug 2008}\newline \begin{center} to \end{center} \hfill \textsc{Nov 2012} &
-            Software Developer at \href{https://en.wikipedia.org/wiki/Rentrak}{Rentrak Corp.}\newline
-            Portland, Oregon, USA and Toronto, Ontario, Canada\newline
-            \emph{Media data analysis and auditing} \newline
-            \fontsize{9pt}{10pt}\selectfont
-            \begin{itemize}
-                \item Developed cross-platform application in Groovy to interact with POS systems and transmit transaction information back to central server.
-                \item Developed internal CRM to facilitate multiple business units' interactions with customers, including an email gateway, threaded comments, and porting of legacy CRM data.
-                \item Maintained legacy internal applications (including GUIs in Java 1.3, and 'green screens' in C), including adding new features as required.
-                \item Ported competing system (obtained via acquisition) within existing systems, including data import, reporting system changes and data warehousing.
-                \item Optimized database access as volume passed thresholds that reduced performance to unacceptable levels.
-                \item Implemented marketing materials admin interface in HTML/JS, including drag-and-drop sorting.
-                \item Created internal release tool on top of git with Python/Django.
-            \end{itemize}
-            \bigskip
-            \begin{description}
-                \item[Technologies Utilized:]
-                Linux (CentOS), MS Windows, Unify, Oracle, PostgreSQL,, Java, C, Groovy, Perl, Python, Pro*C, Vim, Emacs, Apache, Nginx, Django, SQL*Plus
-            \end{description}
-        \end{tabular}
-        \\
-
-    % -- SECTION: EDUCATION --
-    
-        \section{Education}
-        \begin{tabular}{rl}
-        \textsc{Aug} 2005 & Bachelor of Computer Science in Engineering, \textbf{University of Michigan}\\
-        \end{tabular}
-    
-
-    % -- SECTION: TECHNICAL SKILLS --
-    
-        \section{Technical Skills}
-        \tagbox{Python} \tagbox{Perl} \tagbox{PHP} \tagbox{C++} \tagbox{ShellScript} \tagbox{JavaScript} \tagbox{TypeScript} \newline\tagbox{MySQL} \tagbox{PostgreSQL} \tagbox{Oracle} \tagbox{MongoDB} \tagbox{ElasticSearch} \newline\tagbox{Django} \tagbox{Flask} \tagbox{Django Rest Framework} \newline
-
-    % -- SECTION: HOBBIES --
-    
-    \section {Other}
-    \begin{itemize}
-        \item Organizer for Pycon Canada 2013, 2015, and 2016
-    \end{itemize}
-    
+\cventry[2em]{2008--2012}{Software Developer}{Rentrak Corp.}{Portland and Toronto}{}{%
+Media data analysis and auditing\newline{}%
+\begin{itemize}%
+\item Developed cross-platform application in Groovy to interact with POS systems and transmit transaction information back to central server.
+\item Developed internal CRM to facilitate multiple business units' interactions with customers, including an email gateway, threaded comments, and porting of legacy CRM data.
+\item Maintained legacy internal applications (including GUIs in Java 1.3, and 'green screens' in C), including adding new features as required.
+\item Ported competing system (obtained via acquisition) within existing systems, including data import, reporting system changes and data warehousing.
+\item Optimized database access as volume passed thresholds that reduced performance to unacceptable levels.
+\item Implemented marketing materials admin interface in HTML/JS, including drag-and-drop sorting.
+\item Created internal release tool on top of git with Python/Django.
+\end{itemize}%
+}
 
 
+\section{Languages}
+%\cvitemwithcomment{Python}{}
 
+\section{Other}
+\cvlistitem{Organizer for Pycon Canada 2013, 2015, and 2016}
 \end{document}
 
 % vim:ft=tex

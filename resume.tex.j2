@@ -1,150 +1,58 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic} 
+\moderncvcolor{blue}
+\usepackage[scale=0.75]{geometry}
 
+% font loading
+% for luatex and xetex, do not use inputenc and fontenc
+% see https://tex.stackexchange.com/a/496643
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math} 
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
 
-    % Change the bottom margin
-    \usepackage[bottom = 2.50cm]{geometry}
-
-    %---------
-    %- ATTRIBUTION:
-    %-
-    %- This is a modified version of the resume template found here:
-    %-     http://www.cv-templates.info/2009/03/professional-cv-latex/
-    %-
-
-    \usepackage{marvosym}
-    \usepackage{url,parskip}
-    \usepackage{xunicode,xltxtra}
-
-    \RequirePackage{color,graphicx}
-    \usepackage[usenames,dvipsnames]{xcolor}
-    \usepackage[big]{layaureo}          % better formatting of the A4 page
-    %- Note: An alternative to Layaureo can be ** \usepackage{fullpage} **
-
-    \usepackage{titlesec}               % custom \section
-
-    % Note: for tabular alignment
-    \usepackage{array}
-    \newcolumntype{R}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{ #1}}
-
-    % -- Hyper-Linking --
-    \usepackage{hyperref}
-    \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-    \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
-
-    % -- Font Setup --
-    \usepackage{fontspec}
-    \defaultfontfeatures{Mapping=tex-text}
-    \setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-
-    % CV Sections inspired by:
-    %   http://stefano.italians.nl/archives/26
-    \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-    \titlespacing{\section}{0pt}{5pt}{5pt}
-
-    % ---[ "Tag" Boxes ]---
-    %
-    % Source: https://tex.stackexchange.com/questions/311934/lets-get-fancy-text-like-tag
-    %
-    \usepackage[skins]{tcolorbox}
-    \definecolor{TagBG}{RGB}{221, 234, 249}
-    \definecolor{TagBorder}{rgb}{0.74, 0.83, 0.9}
-    % \definecolor{beaublue}{rgb}{0.74, 0.83, 0.9}
-    % \definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
-    % \definecolor{babyblue}{rgb}{0.54, 0.81, 0.94}
-
-    \newtcbox{\tagbox}{
-        colback=TagBG,
-        colframe=TagBorder,
-        on line,  % make then inline
-        height=18pt,
-        valign=center,
-    }
-
-    % ---[ END "Tag" Boxes ]---
+% == Personal Data ==
+\name{\VAR{first_name}}{\VAR{last_name}}
+\title{\VAR{title}}
+\phone[mobile]{\VAR{phone.cell}}
+\email{\VAR{email}}
+\social[github]{\VAR{socials.github}}
 
 \begin{document}
+\makecvtitle
 
+\section{Education}
+\BLOCK{for item in education}
+\cventry{\VAR{item.month} \VAR{item.year}}{\VAR{item.title}}{\VAR{item.school}}{}{}{}
+\BLOCK{endfor}
 
-    \pagestyle{empty} % non-numbered pages
+\section{Experience}
+\BLOCK{for item in employment}
+\cventry[2em]{\VAR{item.start}--\VAR{item.end}}{\VAR{item.position}}{\VAR{item.company.name}}{\VAR{item.company.location}}{}{%
+\VAR{item.company.summary}\newline{}%
+\begin{itemize}%
+\BLOCK{for achievement in item.achievements-}
+\item \VAR{achievement}
+\BLOCK{endfor-}
+\end{itemize}%
+}
+\BLOCK{endfor}
 
-    % -- SECTION: TITLE --
-    
-    \par{\centering
-        {\Huge \VAR{name}}
-        \bigskip\par}
-    
+\section{Languages}
+%\cvitemwithcomment{Python}{}
 
-    % -- SECTION: PERSONAL DATA --
-    
-        \section{Personal Data}
-        \begin{tabular}{ r l }
-        \textsc{Work Status in:}                & United States, Canada\\
-        \textsc{Address:}                       & \VAR{address.street}, \VAR{address.city}, \VAR{address.state} \VAR{address.postal_code}\\
-        \textsc{Phone:}                         & \VAR{phone.cell}\\
-        \textsc{Email:}                         & \href{mailto:\VAR{email}}{\VAR{email}}\\
-        \textsc{Github:}                        & \href{\VAR{github.url}}{github.com/\VAR{github.username}}\\
-        \end{tabular}
-    
-
-    % -- SECTION: OBJECTIVE --
-    
-        \section{Objective}
-        \VAR{objective}
-
-    % -- SECTION: WORK EXPERIENCE --
-    
-        \section{Work Experience}
-        \BLOCK{for job in employment-}
-        \begin{tabular}{ R{1.5cm} | p{10.5cm} }
-            \hfill \textsc{\VAR{job.start}}\newline \begin{center} to \end{center} \hfill \textsc{\VAR{job.end}} &
-            \VAR{job.position} at \href{\VAR{job.company.url}}{\VAR{job.company.name}}\newline
-            \VAR{job.company.location}\newline
-            \emph{\VAR{job.company.summary}} \newline
-            \fontsize{9pt}{10pt}\selectfont
-            \begin{itemize}
-                \BLOCK{-for item in job.things}
-                \item \VAR{item}
-                \BLOCK{-endfor}
-            \end{itemize}
-            \bigskip
-            \begin{description}
-                \item[Technologies Utilized:]
-                \BLOCK{for buzzword in job.technologies-}
-                \VAR{buzzword}\VAR{", " if not loop.last else ""}
-                \BLOCK{-endfor}
-            \end{description}
-        \end{tabular}
-        \\
-        \BLOCK{-endfor}
-
-    % -- SECTION: EDUCATION --
-    
-        \section{Education}
-        \begin{tabular}{rl}
-        \BLOCK{-for item in education}
-        \textsc{\VAR{item.month}} \VAR{item.year} & \VAR{item.title}, \textbf{\VAR{item.school}}\\
-        \BLOCK{endfor-}
-        \end{tabular}
-    
-
-    % -- SECTION: TECHNICAL SKILLS --
-    
-        \section{Technical Skills}
-        \BLOCK{for line in skills-}
-            \BLOCK{for tag in line}\tagbox{\VAR{tag}} \BLOCK{endfor}\newline
-        \BLOCK{-endfor}
-
-    % -- SECTION: HOBBIES --
-    
-    \section {Other}
-    \begin{itemize}
-    \BLOCK{-for item in hobbies}
-        \item \VAR{item}
-    \BLOCK{endfor-}
-    \end{itemize}
-    
-
-
+\section{Other}
+\BLOCK{-for item in hobbies}
+\cvlistitem{\VAR{item}}
+\BLOCK{endfor-}
 
 \end{document}
 

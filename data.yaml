@@ -1,9 +1,11 @@
 ---
 name: Brandy Sandrowicz
+first_name: Brandy
+last_name: Sandrowicz
+title: Software Developer
 email: brandy@sandrowicz.org
-github:
-    url: https://github.com/bsandrow
-    username: bsandrow
+socials:
+    github: bsandrow
 phone:
     cell: +1 647 882 2056
 address:
@@ -50,12 +52,13 @@ employment:
     - company:
         name: d1g1t Inc.
         url: https://www.d1g1t.com/
-        location: Toronto, Ontario, Canada
+        # location: Toronto, Ontario, Canada
+        location: Toronto
         summary: Financial Software for Money Management Firms
       position: Software Developer
-      start: Mar 2018
-      end: May 2023
-      things:
+      start: 2018  # March 2018
+      end: 2023  # May 2023
+      achievements:
         - Built a risk level reporting system for money managers with the support of company's financial engineers.
         - Worked on both the Python backend and the React front-end systems.
         - Built and maintained a system that capable of rebalancing 1000's of financial accounts to match user specified parameters while taking into account various trading restrictions.
@@ -78,12 +81,13 @@ employment:
     - company:
         name: Sowingo.com Corp.
         url: https://sowingo.com/
-        location: Toronto, Ontario, Canada
+        # location: Toronto, Ontario, Canada
+        location: Toronto
         summary: Dental Supply Management and Marketplace
       position: Lead Software Developer
-      start: Oct 2013
-      end: Mar 2018
-      things:
+      start: 2013  # Oct 2013
+      end: 2018  # Mar 2018
+      achievements:
         - Built an eCommerce platform allowing sales from 3rd party vendors from the ground-up.
         - Built an inventory management system with specialization in tracking oral surgery supplies from scratch.
         - Built single page app administration system site admins and 3rd party vendors.
@@ -118,12 +122,13 @@ employment:
     - company:
         name: Rentrak Corp.
         url: https://en.wikipedia.org/wiki/Rentrak
-        location: Portland, Oregon, USA and Toronto, Ontario, Canada
+        # location: Portland, Oregon, USA and Toronto, Ontario, Canada
+        location: Portland and Toronto
         summary: Media data analysis and auditing
       position: Software Developer
-      start: Aug 2008
-      end: Nov 2012
-      things:
+      start: 2008  # Aug 2008
+      end: 2012  # Nov 2012
+      achievements:
         - Developed cross-platform application in Groovy to interact with POS systems and transmit transaction information back to central server.
         - Developed internal CRM to facilitate multiple business units' interactions with customers, including an email gateway, threaded comments, and porting of legacy CRM data.
         - Maintained legacy internal applications (including GUIs in Java 1.3, and 'green screens' in C), including adding new features as required.
