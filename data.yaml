@@ -95,7 +95,8 @@ employment:
       technologies:
         - PostgreSQL
         - MySQL
-        - Amazon Web Services (EB, S3, EC2, Route53, RDS, VPC, CloudFront, SQS),
+        # - Amazon Web Services (EB, S3, EC2, Route53, RDS, VPC, CloudFront, SQS),
+        - Amazon Web Services
         - Flask-RESTful
         - Python
         - Flask
@@ -110,7 +111,7 @@ employment:
         - Angular-Material
         - HTML
         - CSS
-        - JavaScript/ECMAScript
+        - JavaScript
         - EmberJS
         - Bootstrap
         - LESS
@@ -141,7 +142,7 @@ employment:
         - MS Windows
         - Unify
         - Oracle
-        - PostgreSQL,
+        - PostgreSQL
         - Java
         - C
         - Groovy
